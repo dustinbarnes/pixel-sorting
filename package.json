@@ -1,0 +1,20 @@
+{
+  "name": "pixel-sort",
+  "version": "0.0.1",
+  "author": "Dustin Barnes <dustin.barnes@gmail.com>",
+  "description": "A command-line utility to run a pixel sorting algorithm on a PNG image",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinbarnes/pixel-sorting.git"
+  },
+  "dependencies" : {
+    "pngjs"      :  "~0.4",
+    "commander"  :  "~2.1",
+    "underscore" :  "~1.5"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
+
