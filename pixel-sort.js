@@ -23,6 +23,7 @@ fs.createReadStream(commander.file)
 	});	
 
 
+// Invert the colors
 var invert = function() {
 	for (var y = 0; y < this.height; y++) {
 	    for (var x = 0; x < this.width; x++) {
@@ -39,6 +40,30 @@ var invert = function() {
 	}
 }
 
+// Convert image to b&w based on NTSC/PAL color algo
+var blackAndWhite = function() {
+	for (var y = 0; y < this.height; y++) {
+	    for (var x = 0; x < this.width; x++) {
+	        var idx = (this.width * y + x) * 4;
+
+	        var r = this.data[idx];
+	        var g = this.data[idx + 1];
+	        var b = this.data[idx + 2];
+
+	        var gray = (0.2989 * r) + (0.5870 * g) + (0.1140 * b);
+
+	        // invert color
+	        this.data[idx] = gray;
+	        this.data[idx+1] = gray;
+	        this.data[idx+2] = gray;
+
+	        // and reduce opacity
+	        // this.data[idx+3] = this.data[idx+3] >> 1;
+	    }
+	}
+}
+
+// Apply the fun pixel sorting
 var sortPixels = function() {
 	// Default -10000000 = rgb(103, 105, 128)
 	var blackValue = commander.black_level;
@@ -246,7 +271,7 @@ var sortPixels = function() {
 		return x;
 	}).bind(this);
 
-	var getNextWhiteXj = (function(_x, _y) {
+	var getNextWhiteX = (function(_x, _y) {
 		var x = _x+1;
 		var y = _y;
 		while(getPixelValue(x, y) < whiteValue) {
