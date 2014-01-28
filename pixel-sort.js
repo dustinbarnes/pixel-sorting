@@ -10,7 +10,11 @@ var allTransforms = {
     blackAndWhite: require('./lib/black-and-white.js'),
     pixelSortBlack: require('./lib/pixel-sort-black.js'),
     pixelSortWhite: require('./lib/pixel-sort-white.js'),
-    pixelSortBrightness: require('./lib/pixel-sort-brightness.js')
+    pixelSortBrightness: require('./lib/pixel-sort-brightness.js'),
+    redBlueSwitch: require("./lib/red-blue-switch.js"),
+    redGreenSwitch: require('./lib/red-green-switch.js'),
+    blueGreenSwitch: require('./lib/blue-green-switch.js'),
+    normalizeBrightness: require('./lib/normalize-brightness.js')
 };
 
 commander
