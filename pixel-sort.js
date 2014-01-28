@@ -19,6 +19,11 @@ var allTransforms = {
     redBlueSwitch: require("./lib/red-blue-switch.js"),
     redGreenSwitch: require('./lib/red-green-switch.js'),
     blueGreenSwitch: require('./lib/blue-green-switch.js'),
+    purePixelSort: require('./lib/pure-pixel-sort.js'),
+    purePixelSortVertical: require('./lib/pure-pixel-sort-vertical.js'),
+    purePixelSortHorizontal: require('./lib/pure-pixel-sort-horizontal.js'),
+    pixelSortGrayout: require('./lib/pixel-sort-grayout.js'),
+    pixelSortBlackHi: require('./lib/pixel-sort-black-hi.js'),
     //normalizeBrightness: require('./lib/normalize-brightness.js')
 };
 
