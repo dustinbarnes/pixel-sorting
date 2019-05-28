@@ -1,13 +1,11 @@
 # pixel-sorting #
 
-I wanted to play with the Pixel Sorting tool at https://github.com/kimasendorf/ASDFPixelSort, but do it in node.js. 
+I wanted to play with the Pixel Sorting tool at [ASDFPixelSort](https://github.com/kimasendorf/ASDFPixelSort), but do it in node.js. Because why not do it in JavaScript? 
+
+Then I wanted to do it in TypeScript, so I updated it. 
 
 ## Usage ##
 
-Like all node apps, the first thing you need to do is get node. 10.x+ is required.
+Standard node. First, install the packages with ```npm install```
 
-Then, you need to install the packages with ```npm install```
-
-Then, run the app with ```node pixel-sort.js```
-
-
+Then, run the app with ```npm run pixel-sort``` to get the command line instructions.

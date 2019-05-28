@@ -3,18 +3,30 @@
   "version": "0.0.1",
   "author": "Dustin Barnes <dustin.barnes@gmail.com>",
   "description": "A command-line utility to run a pixel sorting algorithm on a PNG image",
+  "scripts": {
+    "pixel-sort": "node dist/pixel-sorter.js",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "build": "tsc && npm run tslint"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dustinbarnes/pixel-sorting.git"
   },
-  "dependencies" : {
-    "pngjs"      :  "~0.4",
-    "commander"  :  "~2.1",
-    "underscore" :  "~1.5"
+  "dependencies": {
+    "commander": "^2.20.0",
+    "pngjs": "^3.4.0",
+    "rimraf": "^2.6.3",
+    "shelljs": "^0.8.3",
+    "underscore": "^1.9.1"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=0.10"
-  }
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "@types/pngjs": "^3.3.2",
+    "@types/rimraf": "^2.0.2",
+    "@types/shelljs": "^0.8.5",
+    "ts-node": "^5.0.0",
+    "tslint": "^5.9.1",
+    "typescript": "^3.4.5"
+  },
+  "license": "MIT"
 }
-
